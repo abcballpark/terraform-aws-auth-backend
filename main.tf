@@ -8,6 +8,7 @@ resource "aws_cognito_user_pool" "main" {
     require_numbers   = true
     require_symbols   = false
     require_uppercase = true
+    temporary_password_validity_days = 7
   }
 }
 
