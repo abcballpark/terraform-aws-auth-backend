@@ -18,3 +18,7 @@ resource "aws_cognito_user_pool_client" "enrollment-api" {
   generate_secret     = true
   explicit_auth_flows = ["ALLOW_USER_SRP_AUTH", "ALLOW_REFRESH_TOKEN_AUTH"]
 }
+
+module "tables" {
+  source = "./data"
+}
